@@ -1,6 +1,6 @@
 
 
-struct SPIFrame_from_rpi	// to STM
+typedef struct 	// to STM
 {
 	char mode_of_frame = 1;
 
@@ -19,9 +19,11 @@ struct SPIFrame_from_rpi	// to STM
 	bool module6_power_switch : 6;
 	bool module7_power_switch : 7;
 	bool module8_power_switch : 8;
-};
 
-struct SPIFrame_from_rpi_extended	// to STM
+	char meaning_of_life = 42;
+} SPIFrame_from_rpi;
+
+typedef struct 	// to STM
 {
 	char mode_of_frame = 2;
 	
@@ -47,9 +49,11 @@ struct SPIFrame_from_rpi_extended	// to STM
 	float PID4_P, PID4_I, PID4_D;
 	float PID5_P, PID5_I, PID5_D;
 	float PID6_P, PID6_I, PID6_D;
-};
 
-struct SPIFrame_from_stm	// to rpi
+	char meaning_of_life = 42;
+} SPIFrame_from_rpi_extended;
+
+typedef struct 	// to rpi
 {
 	char mode_of_frame = 1;
 
@@ -68,4 +72,13 @@ struct SPIFrame_from_stm	// to rpi
 	float module6_current;
 	float module7_current;
 	float module8_current;
-};
+
+	int8_t engine1;
+	int8_t engine2;
+	int8_t engine3;
+	int8_t engine4;
+	int8_t engine5;
+	int8_t engine6;
+
+	char meaning_of_life = 42;
+} SPIFrame_from_stm;
