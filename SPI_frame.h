@@ -1,8 +1,10 @@
-
+#define RPI_DATA_FRAME_ID 1
+#define RPI_SETTINGS_FRAME_ID 2
+#define STM_FRAME_ID 1
 
 typedef struct 	// to STM
 {
-	char frame_id = 1;
+	char frame_id = RPI_DATA_FRAME_ID;
 
 	float pos_x;
 	float pos_y;
@@ -16,7 +18,7 @@ typedef struct 	// to STM
 
 typedef struct 	// to STM
 {
-	char frame_id = 2;
+	char frame_id = RPI_SETTINGS_FRAME_ID;
 
 	bool module1_power_switch : 1;
 	bool module2_power_switch : 2;
@@ -39,14 +41,14 @@ typedef struct 	// to STM
 
 typedef struct 	// to rpi
 {
-	char frame_id = 1;
+	char frame_id = STM_FRAME_ID;
 
-	float pos_x;
-	float pos_y;
-	float pos_z;
-	float pos_pitch;
-	float pos_roll;
-	float pos_yaw;
+	float current_pos_x;
+	float current_pos_y;
+	float current_pos_z;
+	float current_pos_pitch;
+	float current_pos_roll;
+	float current_pos_yaw;
 
 	float module1_current;
 	float module2_current;
@@ -57,12 +59,12 @@ typedef struct 	// to rpi
 	float module7_current;
 	float module8_current;
 
-	int8_t engine1;
-	int8_t engine2;
-	int8_t engine3;
-	int8_t engine4;
-	int8_t engine5;
-	int8_t engine6;
+	int8_t engine1_speed;
+	int8_t engine2_speed;
+	int8_t engine3_speed;
+	int8_t engine4_speed;
+	int8_t engine5_speed;
+	int8_t engine6_speed;
 
 	char meaning_of_life = 42;
 } SPIFrame_from_stm;
