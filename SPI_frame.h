@@ -21,13 +21,13 @@ typedef struct 	// to STM
 	char frame_id = RPI_SETTINGS_FRAME_ID;
 
 	bool module1_power_switch : 1;
-	bool module2_power_switch : 2;
-	bool module4_power_switch : 3;
-	bool module3_power_switch : 4;
-	bool module5_power_switch : 5;
-	bool module6_power_switch : 6;
-	bool module7_power_switch : 7;
-	bool module8_power_switch : 8;
+	bool module2_power_switch : 1;
+	bool module4_power_switch : 1;
+	bool module3_power_switch : 1;
+	bool module5_power_switch : 1;
+	bool module6_power_switch : 1;
+	bool module7_power_switch : 1;
+	bool module8_power_switch : 1;
 
 	float PID1_P, PID1_I, PID1_D;
 	float PID2_P, PID2_I, PID2_D;
