@@ -6,12 +6,12 @@ typedef struct 	// to STM
 {
 	char frame_id = RPI_DATA_FRAME_ID;
 
-	float pos_x;
-	float pos_y;
-	float pos_z;
-	float pos_pitch;
-	float pos_roll;
-	float pos_yaw;
+	float dest_pos_x;
+	float dest_pos_y;
+	float dest_pos_z;
+	float dest_pos_pitch;
+	float dest_pos_roll;
+	float dest_pos_yaw;
 
 	char meaning_of_life = 42;
 } SPIFrame_from_rpi_data;
