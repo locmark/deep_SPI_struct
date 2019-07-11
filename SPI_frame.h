@@ -131,12 +131,12 @@ typedef struct 	// to rpi
 	float module_robot_arm_current;
 	float module8_current;
 
-	int module_motor_fl_speed;
-	int module_motor_fr_speed;
-	int module_motor_bl_speed;
-	int module_motor_br_speed;
-	int module_motor_l_speed;
-	int module_motor_r_speed;
+	int motor_fl_speed;
+	int motor_fr_speed;
+	int motor_bl_speed;
+	int motor_br_speed;
+	int motor_l_speed;
+	int motor_r_speed;
 
 	bool module_motor_fl : 1;
 	bool module_motor_fr : 1;
